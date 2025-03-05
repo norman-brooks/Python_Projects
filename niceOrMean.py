@@ -12,10 +12,18 @@
 #           Return variable means that we are returning the variable to
 #           back to the calling function.
 
+
+
+
+
+
+
 def start(nice=0,mean=0,name=""):
     # get user's name
     name = describe_game(name)
     nice,mean,name = nice_mean(nice,mean,name)
+
+
 
 
 def describe_game(name):
@@ -34,7 +42,7 @@ def describe_game(name):
         while stop:
             if name == "":
                 name = input("\nWhat is your name? \n>>> ").capitalize()
-                if name != "":
+            if name != "":
                     print("\nWelcome, {}!".format(name))
                     print("\nIn this game, you will be greeted \nby several different people. \nYou can choose to be nice or mean")
                     print("but at the end of the game your fate \n will be sealed by your actions.")
@@ -101,6 +109,13 @@ def again(nice,mean,name):
 import winsound
 winsound.Beep(1000, 500)
 
+def reset(nice,mean,name):
+    nice = 0
+    main = 0
+    # Notice, I do not reset the name variable as that same user has elected to play again
+    start(nice,mean,name)
+
+        
 
 if __name__ == "__main__":
     start()
