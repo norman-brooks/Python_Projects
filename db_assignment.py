@@ -26,7 +26,7 @@ for x in files_tuple:
     if x.endswith('txt'):
         with conn:
             cur = conn.cursor()
-            # will denot a one element tuple for each name ending in txt
+            # will denote a one element tuple for each name ending in txt
             cur.execute("INSERT INTO tbl_assign (col_filename) VALUES (?)", (x,))
             print(x)
 conn.close
