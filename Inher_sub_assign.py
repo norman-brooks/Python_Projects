@@ -5,23 +5,25 @@ class Vehicle:
                 self.model = model
     # Above is our Parent Class with an argument
 
+        def printveh(self):
+            print(self.year, self.make, self.model)    
+
         
     # Below are children classes of "Vehicle"
 class Motorcycle(Vehicle):
-        def __init__(self, year, make, model):
-            super(). __init__(fuel)
+        def __init__(self, year, make, model, fuel):
+            super().__init__(year, make, model)
             self.fuel = fuel
-
+            
 
 class Cycle(Vehicle):
-        def __init__(self, year, make, model):
-            super(). __init__(pedals)
+        def __int__(self, year, make, model, pedals):
+            super(). __init__ (year, make, model)
             self.pedals = pedals
 
     # We use the Vehicle to create and object and THEN execute the printname method
 
-def printveh(self):
-    print(self.year, self.make, self.model, self.fuel)
-    x = Vehicle(1971, "Harley", "Softtail", "Carbureted")
- 
-    x.printveh
+
+       
+x = Vehicle(1971, "Harley", "Softtail")
+x.printveh()
